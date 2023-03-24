@@ -4,6 +4,7 @@ import { Inter } from 'next/font/google'
 import styles from '@/styles/Home.module.css'
 import Gallery from './as';
 import { Profile } from './as';
+import { Bio } from './as';
 
  
 
@@ -161,19 +162,32 @@ function Ali()
   );
 }
 
+const person = {
+  name: 'Gregorio Y. Zara',
+  theme: {
+    backgroundColor: 'black',
+    color: 'pink'
+  }
+};
 
-// export default function Gallery() {
+function TodoList1() {
+  return (
+    <div style={person.theme}>
+      <h1>{person.name}  Todos</h1>
+      <img
+        className="avatar"
+        src="https://i.imgur.com/7vQD0fPs.jpg"
+        alt="Gregorio Y. Zara"
+      />
+      <ul>
+        <li>Improve the videophone</li>
+        <li>Prepare aeronautics lectures</li>
+        <li>Work on the alcohol-fuelled engine</li>
+      </ul>
+    </div>
+  );
+}
 
-//   return (
-//     <section>
-//       <h1>Amazing scientists</h1>
-//       {/* <Ali /> */}
-//       <Profile />
-//       <Profile />
-//       <Profile />
-//     </section>
-//   );
-// }
 export default function App() {
   return (
     <div>
@@ -183,6 +197,10 @@ export default function App() {
     <h1>Importing picture from as.js file .</h1>
     <Profile />
     {/* <Gallery/> */}
+    <h1>Use Of JSX Extension inside React Component and Function.</h1>
+    <Bio />
+    <p>Passing js oject using double curly braces inside jsx.</p>
+    <TodoList1 />
     </div>
      
   );
