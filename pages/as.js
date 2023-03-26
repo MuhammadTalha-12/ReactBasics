@@ -1,3 +1,6 @@
+ 
+import React from "react";
+import { Component } from "react";
 export function Profile() {
     return (
       <img
@@ -22,15 +25,59 @@ export function Profile() {
   }
   
   
-  export default function Gallery() {
-    return (
-      <section>
-        <h1>Amazing scientists</h1>
-        <Profile />
-        <Profile />
-        <Profile />
-      </section>
+//   export default function Gallery() {
+//     return (
+//       <section>
+//         <h1>Amazing scientists</h1>
+//         <Profile />
+//         <Profile />
+//         <Profile />
+//       </section>
+//     );
+//   }
+
+export class Parentcomponent extends Component{
+  render()
+  {
+    return(
+      <div>
+        <h1>I am the Parent Compomnet :</h1> 
+        <h3><Childcomponet text="1st component"/></h3>
+        <h3><Childcomponet text="2st component"/></h3>
+        <h3><Childcomponet text="3st component"/></h3>
+      </div>
+
     );
   }
-
+}
    
+ export  const Childcomponet=(props)=>{
+    return(
+      <p>{props.text}</p>
+
+
+    );
+  }
+   
+
+//  export  class Test extends React.Component{    
+//     constructor() {    
+//         this.state = {      
+//             id: 1,      
+//             name: "test"    
+//         };  
+//     }    
+    
+//     render() {    
+//         return (      
+//             <div>        
+//               <p>{this.state.id}</p>        
+//               <p>{this.state.name}</p>      
+//             </div>    
+//         );  
+//     }
+// }
+
+
+ // export default Childcomponet;
+  
